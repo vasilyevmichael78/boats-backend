@@ -33,11 +33,12 @@ public class DataLoader implements CommandLineRunner {
       modelRepository.save(model2);
       modelRepository.save(model3);
     }
-    if (modelRepository.count() == 0) {
+    if (shipyardRepository.count() == 0) {
 
       Shipyard shipyard1 = new Shipyard("Algomar Yachts", "Turkey");
       Shipyard shipyard2 = new Shipyard("Nizza boats", "France");
       shipyardRepository.save(shipyard1);
+      shipyardRepository.save(shipyard2);
     }
     if (boatsRepository.count() == 0) {
 
